@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
 	srand(time(NULL));
-	int x[120],j[120],i, k, r, c;
+	int x[120],j[120],i, k, r, c, t, d[120];
 	string s;
 	cout << "Enter message to convert: ";
 	getline(cin, s);
@@ -15,6 +15,7 @@ int main()
 	if (k % 2 == 0 || k % 3 == 0 || k % 5 == 0 || k % 7 == 0)
 	{
 		k = rand() % 100 + 1;
+		t = k;
 	}
 	for (i=0;i < s.length();i++)
 	{
@@ -28,6 +29,7 @@ int main()
 		j[c] = j[c] % 128;
 		cout << j[c];
 	}
+	cout << endl;
 	system("pause");
 	return 0;
 }
